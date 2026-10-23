@@ -8,3 +8,10 @@ wheels/
 
 # Virtual environments
 .venv
+.env
+# Data pulls
+data/
+.env
+
+# Generated web exports (rebuild with: uv run python -m catalog.build)
+web/data/
