@@ -3,6 +3,10 @@
 A prototype heat map of how much forest data exists for each patch of California, across sources,
 built on the unified record schema in [`docs/schema.md`](docs/schema.md).
 
+<img width="408" height="255" alt="image" src="https://github.com/user-attachments/assets/03ab5c0b-f440-4f7f-baca-830ad686ac10" />
+<img width="408" height="255" alt="image" src="https://github.com/user-attachments/assets/866072b4-d39e-42a0-8beb-5729c93ee072" />
+
+
 | Source | Kind | Status | Records |
 |---|---|---|---|
 | OFO drone missions + ground plots (Zenodo 23402904) | drone_imagery, field_plot | **real** | 974 |
@@ -33,6 +37,8 @@ source adapter ──> record (GeoParquet, one schema) ──> build.py ──> 
  ingest_ofo.py                                                  ├─> records_{kind}.geojson (footprints)
  simulate.py                                                    └─> nearby.json (overlaps, covered_by, ≤2 km)
 ```
+<img width="520" height="321" alt="image" src="https://github.com/user-attachments/assets/977b2365-454a-4085-8d36-54cc14a547fc" />
+
 
 - **Coverage** is computed at H3 res 8 (~0.74 km²) and rolled up to res 5–7. Small footprints add
   `area / cell area`; fuzzed locations (FIA, ±1 mile) are spread over every cell they could be in;
